@@ -1,3 +1,6 @@
+//
+// Created by dahamacher on 4/4/2021.
+//
 #if defined(_WIN32)
 #ifndef _WIN32_WINNT
 #define _WIN32_WINNT 0x0600
@@ -26,7 +29,3 @@
 #endif
 #include <stdio.h>
 #include <string.h>
-#define MAX_BATCH 100
-
-int send_udp_packet(char *address, char *port, char *message, int batch_size);
-int start_udp_server();
