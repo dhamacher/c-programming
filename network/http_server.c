@@ -328,31 +328,12 @@ int main() {
                     client->received += r;
                     client->request[client->received] = 0;
 
-//                    char *q = strstr(client->request, "\r\n\r\n");
-
                     /* Get current date and time and print the received packet content. */
                     time_t now;
                     struct tm *timeinfo;
                     time(&now);
                     timeinfo = localtime(&now);
                     printf("HTTP Packet Received at %s:\n%s\n", asctime(timeinfo), client->request);
-
-//                    if (q) {
-//                        *q = 0;
-//
-//                        if (strncmp("GET /", client->request, 5)) {
-//                            send_400(client);
-//                        } else {
-//                            char *path = client->request + 4;
-//                            char *end_path = strstr(path, " ");
-//                            if (!end_path) {
-//                                send_400(client);
-//                            } else {
-//                                *end_path = 0;
-//                                serve_resource(client, path);
-//                            }
-//                        }
-//                    } //if (q)
                 }
             }
 
