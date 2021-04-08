@@ -1,18 +1,20 @@
-# C-programming
-Repository with random C code as part of practicing my craft.
+# Introduction
+Code written in C to use for network communication.
 
-# Why C?
-It gets me very close to the bare metal of any device and I want to learn more about memory management.
+[[SOURCE]] https://github.com/codeplea/Hands-On-Network-Programming-with-C/blob/master/chap03/tcp_serve_toupper_fork.c 
+## Run  UDP (Proxy) Server
+Use this command to start a **udp tcp proxy**.
 
-# Setup
-## For Windows Environments
-I use Visual Studio Code because I don't need the overhead that VIsual Studio comes with. The steps included to build any file in this repositiry is as follows:
-1. Open (or install and open) VS code and install the **Microsoft C/C++ Extension**.
-2. Once this is complete, install the build tools either from the extensipon's link or the web installer included in this repository under **/tools/**
-3. Open the developers command prompt in Windows and change directory to this repository root folder.
-4. Type in **code .** to start Visual Studio code at that location.
-5. Create run/debug config with VS code.
-6. Build and run files.
+    udp_server 10.0.0.79 53914
 
-## For Linux Environments
+Use this command to start a **simple UDP server**.
 
+    udp_server 127.0.0.1 53
+
+
+
+
+## Resources
+Use the following references for development and testing:
+* Definition for windows socket api **ws2def.h** - https://docs.microsoft.com/en-us/windows/win32/api/ws2def/
+* Study material (contains source code) for ideas - https://www.amazon.ca/Hands-Network-Programming-programming-optimized-ebook/dp/B07PSJKHKJ
